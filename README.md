@@ -12,6 +12,7 @@ DevTools listening on ws://127.0.0.1:62732/devtools/browser/6a6c71ba-c9a1-4233-b
 ________________________________________________________________________________________________________________________
 Project Structure
 The project is organized into several directories and files, which are structured as follows:
+
 twitch_tests/.idea/
 │
 
