@@ -2,48 +2,37 @@
 test-task for twitch
 _______________________________________________________________________________________________________________________
 To run the tests, you need to run the command in the terminal:
+```
 pytest -q --tb=short
-
+```
 My example of run and result:
+```
 PS C:\Users\Admin\IdeaProjects\twitch_test\.idea> pytest -q --tb=short
 DevTools listening on ws://127.0.0.1:62732/devtools/browser/6a6c71ba-c9a1-4233-b986-7815c7df9121
 . [100%]
 1 passed in 18.70s
+```
 ________________________________________________________________________________________________________________________
 Project Structure
 The project is organized into several directories and files, which are structured as follows:
-
+```
 twitch_tests/.idea/
 │
-
 ├── tests/
-
 │   ├── __init__.py
-
 │   ├── test_twitch.py
-
 │
-
 ├── page_objects/
-
 │   ├── __init__.py
-
 │   ├── twitch_page.py
-
 │   ├── twitch_locators.py
-
 │
-
 ├── utils/
-
 │   ├── __init__.py
-
 │   ├── webdriver_manager.py
-
 │
-
 └── requirements.txt
-
+```
 
 Explanation of the Structure:
 1. Root Directory (twitch_tests/):
@@ -71,3 +60,49 @@ Why This Structure?
 - Maintainability: By organizing the project in a logical manner, it becomes easier to make updates and modifications. If a UI element changes, you only need to update the locator in one place.
 - Collaboration: A well-structured project makes it easier for multiple developers to collaborate, as they can quickly understand the layout and find the files they need to work with.
 Overall, this project structure enhances clarity, organization, and efficiency in the development and testing process.
+
+________________________________________________________________________________________________________________________
+
+Project Structure Improvement
+
+The framework structure can always be enhanced to make it more flexible, understandable, and maintainable.
+1. Configuration Directory.
+Create a config/ directory to store configuration files (e.g., for test environment settings or WebDriver parameters).
+2. Dataset Structure.
+Create a data/ directory to store data files for tests (JSON, CSV, etc.).
+3. Reporting Directory.
+Include a reports/ directory for storing test execution reports. This can be useful for analyzing testing outcomes.
+4. Logging Structure.
+Add a logs/ directory to store log files. This will allow you to keep track of test execution information, which can be helpful for diagnosing issues.
+
+Example of Improved Structure:
+```
+twitch_tests/
+│
+├── config/
+│   ├── config.py
+│
+├── data/
+│   ├── test_data.json
+│
+├── logs/
+│   ├── test_log.log
+│
+├── reports/
+│   ├── test_report.html
+│
+├── tests/
+│   ├── init.py
+│   ├── test_twitch.py
+│
+├── page_objects/
+│   ├── init.py
+│   ├── twitch_page_object.py
+│   ├── twitch_locators.py
+│
+├── utils/
+│   ├── init.py
+│   ├── webdriver_manager.py
+│
+└── requirements.txt
+```
